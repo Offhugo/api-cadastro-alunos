@@ -62,15 +62,15 @@ http://localhost:8080/swagger-ui.html
 
 ## Como Rodar o projeto
 
-# Clone o repositório
+### Clone o repositório
 git clone https://github.com/Offhugo/api-cadastro-alunos
 
-# Acesse o diretório
+### Acesse o diretório
 cd api-cadastro-alunos
 
-# Rode a aplicação (Linux/macOS)
+### Rode a aplicação (Linux/macOS)
 ./mvnw spring-boot:run
 
-# ou (Windows)
+### ou (Windows)
 mvnw spring-boot:run
 
