@@ -60,6 +60,18 @@ http://localhost:8080/swagger-ui.html
 
 - Uso do Maven e configuração de dependências
 
+## Como rodar o projeto
 
+# Clone o repositório
+git clone https://github.com/Offhugo/api-cadastro-alunos
+
+# Acesse o diretório
+cd seu-repositorio
+
+# Rode a aplicação (Linux/macOS)
+./mvnw spring-boot:run
+
+# ou (Windows)
+mvnw spring-boot:run
 
 
