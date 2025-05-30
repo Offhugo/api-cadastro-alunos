@@ -35,10 +35,10 @@ API REST que realiza algumas operações básicas para gerenciamento de alunos e
 
 ## Endpoints principais
 
-GET /alunos/all - lista todos os alunos
-POST /cursos - Salva um novo curso
-POST /matricula - Matricula um aluno em um curso
-GET /alunos/buscarNome - Retorna um aluno pelo nome
+- GET /alunos/all - lista todos os alunos
+- POST /cursos - Salva um novo curso
+- POST /matricula - Matricula um aluno em um curso
+- GET /alunos/buscarNome - Retorna um aluno pelo nome
 
 ## Documentação da API em:
 
