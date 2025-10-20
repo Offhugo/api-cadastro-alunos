@@ -12,6 +12,7 @@ API REST que realiza algumas operações básicas para gerenciamento de alunos e
 - Lombok
 - ModelMapper
 - Maven
+- Hibernate
 
 ## Estrutura do projeto
 
