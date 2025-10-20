@@ -5,7 +5,7 @@ API REST que realiza algumas operações básicas para gerenciamento de alunos e
 - Java 17
 - Spring Boot
 - Spring Data JPA
-- Spring Web
+- Spring Web (jackson)
 - Bean Validation (Jakarta)
 - Banco H2
 - Swagger OpenAPI
@@ -13,6 +13,7 @@ API REST que realiza algumas operações básicas para gerenciamento de alunos e
 - ModelMapper
 - Maven
 - Hibernate
+- Mockito e JUnit 5
 
 ## Estrutura do projeto
 
@@ -47,7 +48,7 @@ http://localhost:8080/swagger-ui.html
 
 ## Aprendizados
 
-- Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
+# Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
 
 - Arquitetura de camadas com Spring Boot
 
