@@ -1,6 +1,7 @@
 package MeusCodigos.CadEscolar.Rest.DTO;
 
 import MeusCodigos.CadEscolar.domain.Model.CursoModel;
+import MeusCodigos.CadEscolar.domain.Model.MateriaModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import lombok.Data;
@@ -30,6 +31,10 @@ public class CursoDTO {
     @Schema(description = "Aluno matriculado no curso", example = "Estevão")
     @Column(name = "aluno", nullable = false)
     private String aluno;
+
+    @Schema(description = "Materia do curso", example = "Calculo 1")
+    @Column(name = "materia", nullable = false)
+    private MateriaModel materiaModel;
 
     public CursoModel toModel(){
         ModelMapper modelMapper = new ModelMapper();

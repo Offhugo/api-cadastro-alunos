@@ -22,10 +22,12 @@ public class ItemBoletimModel { // Entidade intermediaria
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "boletim_id", nullable = false)
+    @Column(unique = true)
     private BoletimModel boletim;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "materia_id", nullable = false)
+    @Column(unique = true)
     private MateriaModel materiaModel;
 
     @NotNull

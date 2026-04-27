@@ -15,10 +15,10 @@ import java.util.List;
 @Table(
         name = "boletim",
         uniqueConstraints = {
-                @UniqueConstraint(name = "uk_aluno_curso", columnNames = {"aluno_id", "curso_id"})
+                @UniqueConstraint(name = "uk_aluno_curso", columnNames = {"aluno_id"})
         },
         indexes = {
-                @Index(name = "idx_boletim_curso", columnList = "curso_id")
+                @Index(name = "idx_boletim_aluno", columnList = "aluno_id")
         }
 )
 public class BoletimModel {

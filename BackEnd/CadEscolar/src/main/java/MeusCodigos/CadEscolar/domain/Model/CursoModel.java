@@ -36,6 +36,10 @@ public class CursoModel {
     @Column(name = "categoria", length = 255, nullable = false)
     private String categoria;
 
+    @NotBlank(message = "Deve conter algum valor")
+    @Column(name = "materia", length = 255, nullable = false)
+    private MateriaModel materiaModel;
+
     // Relacionamento bidirecional
     @JsonIgnore
     @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
