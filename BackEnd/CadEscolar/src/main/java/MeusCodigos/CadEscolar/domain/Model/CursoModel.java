@@ -4,6 +4,7 @@ import MeusCodigos.CadEscolar.Rest.DTO.CursoDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,7 +17,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "cursoModel")
+@Entity
+@Table(name = "curso")
 @EqualsAndHashCode(exclude = "alunos")
 public class CursoModel {
     @Id
@@ -36,9 +38,14 @@ public class CursoModel {
     @Column(name = "categoria", length = 255, nullable = false)
     private String categoria;
 
-    @NotBlank(message = "Deve conter algum valor")
-    @Column(name = "materia", length = 255, nullable = false)
-    private MateriaModel materiaModel;
+    @NotNull(message = "Deve conter algum valor")
+    @ManyToMany
+    @JoinTable(
+            name = "curso_materia",
+            joinColumns = @JoinColumn(name = "curso_id"),
+            inverseJoinColumns = @JoinColumn(name = "materia_id")
+    )
+    private List<MateriaModel> materias;
 
     // Relacionamento bidirecional
     @JsonIgnore

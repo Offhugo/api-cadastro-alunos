@@ -4,12 +4,16 @@ import MeusCodigos.CadEscolar.domain.Model.CursoModel;
 import MeusCodigos.CadEscolar.domain.Model.MateriaModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Schema(name = "CursoDTO", description = "Objeto de traferência de dados do curso")
 public class CursoDTO {
 
@@ -30,11 +34,11 @@ public class CursoDTO {
 
     @Schema(description = "Aluno matriculado no curso", example = "Estevão")
     @Column(name = "aluno", nullable = false)
-    private String aluno;
+    private AlunoDTO aluno;
 
     @Schema(description = "Materia do curso", example = "Calculo 1")
     @Column(name = "materia", nullable = false)
-    private MateriaModel materiaModel;
+    private List<MateriaDTO> materias;
 
     public CursoModel toModel(){
         ModelMapper modelMapper = new ModelMapper();

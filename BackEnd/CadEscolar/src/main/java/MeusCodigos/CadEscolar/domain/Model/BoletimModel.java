@@ -12,15 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(
-        name = "boletim",
-        uniqueConstraints = {
-                @UniqueConstraint(name = "uk_aluno_curso", columnNames = {"aluno_id"})
-        },
-        indexes = {
-                @Index(name = "idx_boletim_aluno", columnList = "aluno_id")
-        }
-)
 public class BoletimModel {
 
     @Id
