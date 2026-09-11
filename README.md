@@ -41,7 +41,7 @@ The application follows a layered architecture where each component has a define
                          v
               +----------------------+
               |      Controller      |
-              |    REST API Layer     |
+              |    REST API Layer    |
               +----------+-----------+
                          |
                          v
